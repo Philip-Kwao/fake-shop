@@ -1,4 +1,4 @@
-import React from 'react'
+"use client"
 import { FaTrashAlt } from 'react-icons/fa'
 import { GoDash, GoPlus } from 'react-icons/go'
 

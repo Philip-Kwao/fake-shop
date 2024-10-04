@@ -17,7 +17,7 @@ const ProductCard = async (props:ProductCardProps) => {
         <h3 className="font-bold text-lg w-full">{props.product.title}</h3>
         <p className="line-clamp-1">{props.product.description}</p>
         <div className="flex items-center justify-between w-full">
-      <span className="font-bold italic">${props.product.price}</span>
+      <span className="font-bold italic">GHS {props.product.price}</span>
         <PurchaseBtn product={props.product} />
         </div>
         </div>

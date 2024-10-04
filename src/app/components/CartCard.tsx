@@ -23,7 +23,7 @@ const CartCard = ({ cartItems }: CartCardProp) => {
         <hr />
         <p className="">{cartItems.product.description}</p>
         <hr />
-        <span className=" text-lg italic text-slate-500">${cartItems.product.price}</span>
+        <span className=" text-lg italic text-slate-500">GHS{cartItems.product.price}</span>
       </div>
       <div className="flex flex-col items-center justify-between space-y-6">
       <QtyBtn
@@ -32,7 +32,7 @@ const CartCard = ({ cartItems }: CartCardProp) => {
         qty={cartItems.qty}
       />
       <div className="text-xl font-bold italic text-slate-500">
-        $ {cartItems.product.price * cartItems.qty}
+        GHS {cartItems.product.price * cartItems.qty}
       </div>
       </div>
     </div>

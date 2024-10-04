@@ -1,3 +1,4 @@
+import { Product } from "@/interface";
 import ProductCard from "./components/ProductCard";
 
 export default async function Home() {
@@ -12,7 +13,7 @@ export default async function Home() {
     flex items-center justify-between gap-4 flex-wrap">
 
       {
-        res.map((r)=>(
+        res.map((r:Product)=>(
           <ProductCard key={r.id} product={r} />
         ))
       }

@@ -8,12 +8,15 @@ import PaystackBtn from "../components/PaystackBtn"
 const CartPage = () => {
     const cartItem = useAppSelector((state)=>state.cart.cartItem)
     const totalPrice = useAppSelector(totalPriceSelector)
+    
     return (
     <div>
         {
-            cartItem.map((cart)=>(
+            cartItem.length>0?(cartItem.map((cart)=>(
                 <CartCard key={cart.product.id} cartItems={cart} />
-            ))
+            ))):(
+                <div className="">No Product in Cart</div>
+            )
         }
         <div className="flex items-center justify-between p-20">
          <span className="font-extrabold text-3xl text-slate-500 ml-10">Total Price: GHS {totalPrice}</span>

@@ -17,9 +17,12 @@ const PaystackBtn = (prop: PayProp) => {
   const handlePaystackCloseAction = () => {
     console.log("closed");
   };
+  const config = {
+      publicKey: `${process.env.NEXT_PUBLIC_KEY}`,
+  }
 
   const componentProps = {
-    publicKey: `${process.env.NEXT_PUBLIC_KEY}`,
+    ...config,
     currency: "GHS",
     email: "bluewebergh@gmail.com",
     amount: prop.amount * 100,

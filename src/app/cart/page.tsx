@@ -14,7 +14,7 @@ const CartPage = () => {
     const totalPrice = useAppSelector(totalPriceSelector)
     
     return (
-    <div>
+    <div className='w-full'>
         {
             cartItem.length>0?(cartItem.map((cart)=>(
                 <CartCard key={cart.product.id} cartItems={cart} />
@@ -22,8 +22,8 @@ const CartPage = () => {
                 <div className="">No Product in Cart</div>
             )
         }
-        <div className="flex items-center justify-between p-20">
-         <span className="font-extrabold text-3xl text-slate-500 ml-10">Total Price: GHS {totalPrice}</span>
+        <div className="flex items-center md:justify-between justify-center gap-4 p-20 flex-wrap">
+         <span className="font-bold lg:font-extrabold text-xl lg:text-3xl text-slate-500 ml-10">Total Price: GHS {totalPrice}</span>
          <div className="text-white bg-slate-500 py-4 px-8 font-bold hover:bg-slate-400">
             <PaystackBtn amount={totalPrice} />
         </div>   

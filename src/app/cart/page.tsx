@@ -1,9 +1,13 @@
 "use client"
+import dynamic from 'next/dynamic';
+
+const PaystackBtn = dynamic(() => import("../components/PaystackBtn"), {
+  ssr: false, // Disable server-side rendering
+});
 
 import { useAppSelector } from "@/redux/store"
 import CartCard from "../components/CartCard"
 import { totalPriceSelector } from "@/redux/features/cartSlice"
-import PaystackBtn from "../components/PaystackBtn"
 
 const CartPage = () => {
     const cartItem = useAppSelector((state)=>state.cart.cartItem)

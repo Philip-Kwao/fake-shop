@@ -9,7 +9,7 @@ interface ProductCardProps{
 const ProductCard = async (props:ProductCardProps) => {
 //   console.log(res);
   return (
-    <div className="max-w-lg mx-auto h-full shadow-lg p-4">
+    <div className="max-w-lg mx-auto h-full shadow-lg p-4 flex flex-wrap">
       <div className="flex items-center justify-between  gap-2">
         <Image src={props.product.image} width={200} height={200} className="w-[100px] md:w-[200px]" alt="" />
         <div className="flex flex-col items-start gap-4">

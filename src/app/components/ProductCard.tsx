@@ -11,7 +11,7 @@ const ProductCard = async (props:ProductCardProps) => {
   return (
     <div className="max-w-lg mx-auto h-full shadow-lg p-4">
       <div className="flex items-center justify-between  gap-2">
-        <Image src={props.product.image} width={200} height={200} alt="" />
+        <Image src={props.product.image} width={200} height={200} className="w-[100px] md:w-[200px]" alt="" />
         <div className="flex flex-col items-start gap-4">
 
         <h3 className="font-bold text-lg w-full">{props.product.title}</h3>

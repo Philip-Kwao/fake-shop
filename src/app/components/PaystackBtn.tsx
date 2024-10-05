@@ -5,7 +5,6 @@ import { PaystackButton } from "react-paystack";
 interface PayProp {
   amount: number;
 }
-// console.log(process.env.NEXT_PUBLIC_PAYSTACK_PUBLIC_KEY)
 const PaystackBtn = (prop: PayProp) => {
     const router = useRouter()
   const handlePaystackSuccessAction = () => {
